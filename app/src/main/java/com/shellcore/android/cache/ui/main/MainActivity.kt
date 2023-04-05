@@ -1,4 +1,4 @@
-package com.shellcore.android.cache
+package com.shellcore.android.cache.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
