@@ -3,7 +3,9 @@ package com.shellcore.android.cache
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.shellcore.android.cache.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
