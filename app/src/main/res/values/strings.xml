@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Cache</string>
+    <string name="main_query_btn">Query info</string>
+    <string name="main_clear_btn">Clear cache</string>
 </resources>
