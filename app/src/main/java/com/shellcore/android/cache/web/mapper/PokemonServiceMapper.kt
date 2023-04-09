@@ -1,10 +1,10 @@
-package com.shellcore.android.cache.repository.mapper
+package com.shellcore.android.cache.web.mapper
 
 import com.shellcore.android.cache.core.model.PokemonBO
 import com.shellcore.android.cache.web.model.Result
 import java.util.*
 
-object PokemonListMapper: Function1<List<Result>, List<PokemonBO>> {
+object PokemonServiceMapper: Function1<List<Result>, List<PokemonBO>> {
 
     override fun invoke(p1: List<Result>): List<PokemonBO> {
         val list = arrayListOf<PokemonBO>()

@@ -1,4 +1,4 @@
-package com.shellcore.android.cache.repository
+package com.shellcore.android.cache.repository.pokemon
 
 import com.shellcore.android.cache.core.model.PokemonBO
 import kotlinx.coroutines.flow.Flow

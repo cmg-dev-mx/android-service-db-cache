@@ -1,5 +1,7 @@
-package com.shellcore.android.cache.repository
+package com.shellcore.android.cache.repository.di
 
+import com.shellcore.android.cache.repository.pokemon.PokemonRepository
+import com.shellcore.android.cache.repository.pokemon.PokemonRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
