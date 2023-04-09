@@ -41,6 +41,10 @@ class MainFragment : Fragment() {
             viewModel.queryData()
         }
 
+        binding.mainClearBtn.setOnClickListener {
+            viewModel.clearData()
+        }
+
         return binding.root
     }
 

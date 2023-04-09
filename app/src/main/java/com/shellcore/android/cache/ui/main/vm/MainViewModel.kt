@@ -25,4 +25,12 @@ class MainViewModel @Inject constructor(
             }
         }
     }
+
+    fun clearData() {
+        viewModelScope.launch {
+            repository.clearPokemonList().collect {
+                _queryResponse.value = it
+            }
+        }
+    }
 }

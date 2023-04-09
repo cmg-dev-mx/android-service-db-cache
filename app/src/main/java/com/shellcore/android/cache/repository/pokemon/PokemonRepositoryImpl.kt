@@ -23,10 +23,24 @@ class PokemonRepositoryImpl @Inject constructor(
                     emit(Result.success(PokemonDBMapper.fromDboToBo(dbResult)))
                 }
 
+                delay(3000)
                 val response = service.getPokemonList(20, 0)
                 val responseMapped = PokemonServiceMapper.invoke(response.results)
                 dao.insertPokemon(PokemonDBMapper.fromBoToDbo(responseMapped))
                 emit(Result.success(responseMapped))
+            }
+        } catch (e: Exception) {
+            flow {
+                emit(Result.failure(e))
+            }
+        }
+    }
+
+    override suspend fun clearPokemonList(): Flow<Result<List<PokemonBO>>> {
+        return try {
+            flow {
+                dao.deleteCache()
+                emit(Result.success(emptyList()))
             }
         } catch (e: Exception) {
             flow {

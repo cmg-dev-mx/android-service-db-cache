@@ -5,4 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface PokemonRepository {
     suspend fun queryPokemonList(): Flow<Result<List<PokemonBO>>>
+    suspend fun clearPokemonList(): Flow<Result<List<PokemonBO>>>
 }
